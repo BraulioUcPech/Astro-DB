@@ -6,11 +6,9 @@ interface Props {
   creador: string;
 }
 
-const { category, title, description } = Astro.props;
 
 import { db, User, Todo, Category, eq } from "astro:db";
 
-const users = await db.select().from(User);
 const todos = await db
   .select()
   .from(Todo)
